@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="st.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="slide-container" active>
+        <div class="slide">
+        <div class="content">
+        <h3>01. Art therapy
+        </h3>
+
+        <p>Art therapy, facilitated by M Power and Aditya Birla, offers a therapeutic outlet through creative expression. Participants engaged in art activities that promote mental well-being, self-reflection, and emotional healing.
+
+        </p>
+        </div>
+        <div class="image">
+        <img src="/img/ArtTherapy.JPG" alt="">
+        </div>
+        </div>
+        </div>
+       
+        </div>
+
+        <div class="container">
+            <div class="slide-container">
+            <div class="slide">
+            <div class="content">
+            <h3>02. Relief painting </h3>
+                
+                
+
+            <p>In this workshop, attendees explored the art of relief printing. Gunjan Ma'am taught participants how to create intricate designs by carving a block and then printing it onto paper or fabric, resulting in unique and textured prints. </p>
+           
+            </div>
+            <div class="image">
+            <img src="/img/ReliefPrinting.JPG" alt="">
+            </div>
+            </div>
+            </div>
+           
+            </div>
+
+            <div class="container">
+                <div class="slide-container">
+                <div class="slide">
+                <div class="content">
+                <h3>03. Story telling 
+                </h3>
+                <p>In this engaging workshop, Harsha will take participants on a storytelling journey. Attendees will learn the art of effective storytelling, including narrative structure, character development, and how to captivate an audience through the power of words.
+                </p>
+                </div>
+                <div class="image">
+                <img src="/img/Storytelling.JPG" alt="">
+                </div>
+                </div>
+                </div>
+               
+                </div>
+
+                <div class="container">
+                    <div class="slide-container">
+                    <div class="slide">
+                    <div class="content">
+                    <h3>04. Lippan art 
+                    </h3>
+                    <p>Lippan art is a traditional Indian form of mural decoration. In this workshop, Manjusha Ma'am will guide participants in creating intricate mud and mirror artwork, allowing them to experience the rich cultural heritage of this craft.
+                    </p>
+                    </div>
+                    <div class="image">
+                    <img src="/img/LippanArt.JPG" alt="">
+                    </div>
+                    </div>
+                    </div>
+                   
+
+                    <div id="prev" onclick="prev()"> < </div>
+                    <div id="next" onclick="next()"> > </div>  
+                </div>
+
+                
+            </div>
+                   
+
+
+                    <script>
+                        let slides = document.querySelectorAll('.slide-container');
+                        let index = 0;
+                       // next function
+                       
+    function next(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+    }
+    // previous function
+    function prev() {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+    }
+
+    //autoplay
+    setInterval(next, 5000); //slides changes every 6 seconds
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
